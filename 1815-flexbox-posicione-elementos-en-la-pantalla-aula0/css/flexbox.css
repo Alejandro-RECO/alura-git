@@ -49,6 +49,18 @@
 .videoSobre .container {
     display: flex;
 }
+.videoSobre-sobre{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.videoSobre-video{
+    flex-grow: .5;
+}
+.videoSobre-sobre-list{
+    flex-grow: 2;
+    flex-shrink: 2;
+}
 
 
 /* ------------------------Responsiva------------------------ */
@@ -95,6 +107,12 @@
     .rodapePrincipal-contatoForm-fieldset {
         justify-content: center;
     }
+    .videoSobre .container{
+        flex-direction: column;
+    }
+    .headerPrincipal-nav-link-app{
+        order: -1;
+    }
 }
 
 
@@ -130,11 +148,13 @@
 
 
 
-/* ----------------------------Pruevas----------------------------*/
-
+/* ----------------------------Pruevas flex box----------------------------*/
+/*                            Flex space-around                            */
 .padre {
     display: flex;
     justify-content: space-around;
+    padding: 50px;
+    background-color: rgba(137, 43, 226, 0.226);
 }
 
 .hijo_a {
@@ -154,28 +174,202 @@
     height: 200px;
     background-color: rgb(0, 17, 255);
 }
-
-.grid {
-    margin: 200px;
+/*----------------------------Flex start----------------------------*/
+.padre1 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: start;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: rgba(137, 43, 226, 0.226);
 }
 
-.box {
-    height: 90px;
-    width: 90px;
-    background-color: rgba(0, 128, 0, 0.452);
+.hijo_a1 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
 }
 
-.grid {
+.hijo_b1 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);
+}
+
+.hijo_c1 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 17, 255);
+}
+
+/*----------------------------Flex end----------------------------*/
+
+.padre2 {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: end;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: rgba(137, 43, 226, 0.226);
 }
 
-.course {
-    width: 31.3%;
-    margin: 1%;
-    background-color: black;
-    height: 20px;
+.hijo_a2 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
 }
+
+.hijo_b2 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);
+}
+
+.hijo_c2 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 17, 255);
+}
+
+/*----------------------------Flex center----------------------------*/
+
+.padre3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: rgba(137, 43, 226, 0.226);
+}
+
+.hijo_a3 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+
+.hijo_b3 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);
+}
+
+.hijo_c3 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 17, 255);
+}
+/*----------------------------Flex space-between----------------------------*/
+
+.padre4 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: rgba(137, 43, 226, 0.226);
+}
+
+.hijo_a4 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+
+.hijo_b4 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);
+}
+
+.hijo_c4 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 17, 255);
+}
+
+
+/*----------------------------Flex-grow----------------------------*/
+
+.padre5 {
+    display: flex;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: rgba(137, 43, 226, 0.226);
+}
+
+.hijo_a5 {
+    flex-grow: 5;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+
+.hijo_b5 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);
+}
+
+.hijo_c5 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 17, 255);
+}
+.hijo_d5 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(22, 99, 56);
+}
+.get{
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+
+/* ----------------------------Prueva con elementos---------------------------- */
+
+/* .padre5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 100px;
+    background-color: rgba(225, 246, 255, 0.603);
+    border-radius: 1rem;
+    height: 150px;
+}
+.hijo1{
+    width: 900px;
+    display: flex;
+    justify-content: center;
+}
+.hijo2{
+    display: flex;
+    justify-content: end;
+}
+.lu{
+    padding: 40px;
+    margin: 30px;
+    padding: 20px;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgba(179, 236, 247, 0.315);
+    border: 4px solid rgba(179, 236, 247, 0.315);
+    border-radius: .3rem;
+}
+.lu:hover{
+    background-color: rgb(255, 255, 255);
+    transition: .1s;
+
+}
+.lu a{
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+}
+.lu a:hover{
+    color: rgb(179, 236, 247);
+
+} */
